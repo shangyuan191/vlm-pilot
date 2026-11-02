@@ -25,9 +25,10 @@ pilot1/
   build_pilot1_pool.py              匯出 20 題 × 3 引擎的候選（標注用）
   prompt.py                         選擇 prompt
   qwen_local_select.py              呼叫本機 vLLM 選 K 個
+  gemini_select.py                  呼叫 Gemini（Google AI Studio）選 K 個
   score_k.py                        Oracle / Top-K / Random 期望值 / 模型的符合數與 diversity
   human_labels.json                 人工標注（591 個商品）
-  qwen3-vl-8b-{bnb4,fp8}_k{3,5}_selection.jsonl   模型輸出
+  {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite}_k{3,5}_selection.jsonl   模型輸出
 pilot2/
   build_pilot2.py                   建前 20 題（seed 20261101）
   build_pilot2_extra.py             追加 7 題人工挑選的題目圖（seed 20261102）
@@ -47,15 +48,14 @@ scripts/serve_qwen3vl.sh            起 Qwen3-VL-8B 的 vLLM server
 ```bash
 pip install -r requirements.txt
 cd pilot1
-python score_k.py human_labels.json 3 qwen4bit=qwen3-vl-8b-bnb4_k3_selection.jsonl qwenfp8=qwen3-vl-8b-fp8_k3_selection.jsonl
-python score_k.py human_labels.json 5 qwen4bit=qwen3-vl-8b-bnb4_k5_selection.jsonl
-python score_k.py human_labels.json 5 qwenfp8=qwen3-vl-8b-fp8_k5_selection.jsonl
+python score_k.py human_labels.json 3 qwen4bit=qwen3-vl-8b-bnb4_k3_selection.jsonl lite=gemini-3.1-flash-lite_k3_selection.jsonl
+python score_k.py human_labels.json 5 qwen4bit=qwen3-vl-8b-bnb4_k5_selection.jsonl lite=gemini-3.1-flash-lite_k5_selection.jsonl
 cd ../pilot2
 python score_pilot2.py --model qwen3-vl-8b-bnb4
 python score_pilot2.py --model gemini-3.1-flash-lite
 ```
 
-檢查點：Pilot 1 K = 3 應印出 `Oracle pass 2.22/3 (74%)`、`qwen4bit pass 1.75/3 (58%)`；Pilot 2 Flash-Lite 應是 Full 1.50、Caption 1.70、Blind 1.05。
+檢查點：Pilot 1 K = 3 應印出 `Oracle pass 2.22/3 (74%)`、`qwen4bit pass 1.75/3 (58%)`、`lite pass 1.85/3 (62%)`；Pilot 2 Flash-Lite 應是 Full 1.50、Caption 1.70、Blind 1.05。
 
 ## 1. Subtext-Decor-90 與 parsed 資料（Pilot 1）
 
@@ -111,7 +111,7 @@ cmp <(python -c "import json;print(json.dumps(json.load(open('/tmp/questions.ori
 ```bash
 huggingface-cli download Qwen/Qwen3-VL-8B-Instruct \
   --revision 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b --local-dir models/Qwen3-VL-8B-Instruct
-scripts/serve_qwen3vl.sh 0 bnb4          # 另開一個 terminal；FP8 改成 fp8（port 8022）
+scripts/serve_qwen3vl.sh 0               # 另開一個 terminal；第一個參數是 GPU 編號
 
 cd pilot1
 python qwen_local_select.py --k 3 --model qwen3-vl-8b-bnb4 --url http://127.0.0.1:8021/v1/chat/completions
@@ -132,6 +132,10 @@ read -rs "KEY?Paste API key: " && printf '%s' "$KEY" > ~/.config/gemini_api_key 
 # bash：read -rsp "Paste API key: " KEY && printf '%s' "$KEY" > ~/.config/gemini_api_key && unset KEY
 chmod 600 ~/.config/gemini_api_key
 
+cd pilot1
+python gemini_select.py --k 3 --model gemini-3.1-flash-lite
+python gemini_select.py --k 5 --model gemini-3.1-flash-lite
+cd ..
 python pilot2/run_pilot2.py --backend gemini --model gemini-3.1-flash-lite
 ```
 

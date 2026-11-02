@@ -36,7 +36,7 @@ def call(url, model, k, query, engine, its):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--k", type=int, required=True); ap.add_argument("--model", default="qwen3-vl-8b-fp8")
+    ap.add_argument("--k", type=int, required=True); ap.add_argument("--model", default="qwen3-vl-8b-bnb4")
     ap.add_argument("--url", default="http://127.0.0.1:8021/v1/chat/completions")
     a = ap.parse_args()
     out = HERE / f"{a.model}_k{a.k}_selection.jsonl"

@@ -28,7 +28,7 @@ pilot1/
   gemini_select.py                  呼叫 Gemini（Google AI Studio）選 K 個
   score_k.py                        Oracle / Top-K / Random 期望值 / 模型的符合數與 diversity
   human_labels.json                 人工標注（591 個商品）
-  {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite}_k{3,5}_selection.jsonl   模型輸出
+  {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4}_k{3,5}_selection.jsonl   模型輸出
 pilot2/
   build_pilot2.py                   建前 20 題（seed 20261101）
   build_pilot2_extra.py             追加 7 題人工挑選的題目圖（seed 20261102）
@@ -37,8 +37,9 @@ pilot2/
   human_labels.json                 人工標注：題目圖 Y/N、每盞燈 P/F
   run_pilot2.py                     Caption 描述 + Full / Caption / Blind 選擇（vLLM 或 Gemini）
   score_pilot2.py                   評分
-  {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite}_{captions,full,caption,blind}.jsonl   模型輸出
+  {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4}_{captions,full,caption,blind}.jsonl   模型輸出
 scripts/serve_qwen3vl.sh            起 Qwen3-VL-8B 的 vLLM server
+scripts/serve_internvl3.sh          起 InternVL3-8B 的 vLLM server（每張圖 1 塊 448×448）
 ```
 
 `data/`、`parsed/`、`models/` 不在 repo 裡（見 `.gitignore`），依下面步驟下載或放入。
@@ -48,14 +49,15 @@ scripts/serve_qwen3vl.sh            起 Qwen3-VL-8B 的 vLLM server
 ```bash
 pip install -r requirements.txt
 cd pilot1
-python score_k.py human_labels.json 3 qwen4bit=qwen3-vl-8b-bnb4_k3_selection.jsonl lite=gemini-3.1-flash-lite_k3_selection.jsonl
-python score_k.py human_labels.json 5 qwen4bit=qwen3-vl-8b-bnb4_k5_selection.jsonl lite=gemini-3.1-flash-lite_k5_selection.jsonl
+python score_k.py human_labels.json 3 qwen4bit=qwen3-vl-8b-bnb4_k3_selection.jsonl lite=gemini-3.1-flash-lite_k3_selection.jsonl internvl=internvl3-8b-bnb4_k3_selection.jsonl
+python score_k.py human_labels.json 5 qwen4bit=qwen3-vl-8b-bnb4_k5_selection.jsonl lite=gemini-3.1-flash-lite_k5_selection.jsonl internvl=internvl3-8b-bnb4_k5_selection.jsonl
 cd ../pilot2
 python score_pilot2.py --model qwen3-vl-8b-bnb4
 python score_pilot2.py --model gemini-3.1-flash-lite
+python score_pilot2.py --model internvl3-8b-bnb4
 ```
 
-檢查點：Pilot 1 K = 3 應印出 `Oracle pass 2.22/3 (74%)`、`qwen4bit pass 1.75/3 (58%)`、`lite pass 1.85/3 (62%)`；Pilot 2 Flash-Lite 應是 Full 1.50、Caption 1.70、Blind 1.05。
+檢查點：Pilot 1 K = 3 應印出 `Oracle pass 2.22/3 (74%)`、`qwen4bit pass 1.75/3 (58%)`、`lite pass 1.85/3 (62%)`、`internvl pass 1.57/3 (52%)`；Pilot 2 Flash-Lite 應是 Full 1.50、Caption 1.70、Blind 1.05。
 
 ## 1. Subtext-Decor-90 與 parsed 資料（Pilot 1）
 
@@ -121,6 +123,22 @@ python pilot2/run_pilot2.py --model qwen3-vl-8b-bnb4 --url http://127.0.0.1:8021
 ```
 
 輸出檔已存在時會從斷點續跑；要從頭重跑，先把對應的 `*.jsonl` 移走。
+
+### InternVL3-8B-Instruct（vLLM 0.25.1）
+
+```bash
+huggingface-cli download OpenGVLab/InternVL3-8B-Instruct \
+  --revision ddb3a169d5582e5c76e0809a128e55ab63686ada --local-dir models/InternVL3-8B-Instruct
+scripts/serve_internvl3.sh 0            # 另開一個 terminal；port 8031
+
+cd pilot1
+python qwen_local_select.py --k 3 --model internvl3-8b-bnb4 --url http://127.0.0.1:8031/v1/chat/completions
+python qwen_local_select.py --k 5 --model internvl3-8b-bnb4 --url http://127.0.0.1:8031/v1/chat/completions
+cd ..
+python pilot2/run_pilot2.py --model internvl3-8b-bnb4 --url http://127.0.0.1:8031/v1/chat/completions
+```
+
+每張圖限制成 1 塊 448×448：`serve_internvl3.sh` 會建 `models/InternVL3-8B-Instruct-1tile`，只改 `config.json` 的 `max_dynamic_patch`（12 → 1），權重用連結指回原檔。InternVL3 回傳的 JSON 有時鍵沒加引號（`{4: 1}`），`vlm_subset_selection.parse_json` 會補上引號再解析。
 
 ### Gemini 3.1 Flash-Lite（Google AI Studio 免費 API）
 

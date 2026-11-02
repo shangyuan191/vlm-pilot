@@ -26,7 +26,10 @@ def parse_json(t):
     except json.JSONDecodeError:
         m = re.search(r"\{.*\}", t, flags=re.S)
         if not m: raise
-        return json.loads(m.group(0))
+        try: return json.loads(m.group(0))
+        except json.JSONDecodeError:
+            # some models (e.g. InternVL3) write bare integer keys: {4: 1}; quote them and retry
+            return json.loads(re.sub(r'([{,]\s*)(\d+)\s*:', r'\1"\2":', m.group(0)))
 
 
 def rows():

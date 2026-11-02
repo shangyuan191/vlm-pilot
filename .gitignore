@@ -1,0 +1,8 @@
+# large or non-redistributable data: download / unzip locally (see README)
+data/
+parsed/
+parsed.zip
+models/
+pilot1/web/
+__pycache__/
+*.log

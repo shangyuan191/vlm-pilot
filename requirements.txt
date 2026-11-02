@@ -1,0 +1,5 @@
+# data preparation, prompting, scoring (Python 3.11)
+huggingface_hub>=0.34
+pillow>=11
+# model serving runs in a separate environment:
+#   pip install vllm==0.25.1 bitsandbytes   (and make sure `ninja` is on PATH)

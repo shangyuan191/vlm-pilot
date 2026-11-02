@@ -1,0 +1,3821 @@
+{
+ "1": {
+  "conditions": [
+   "椅子",
+   "粉色與白色",
+   "童話感（浪漫、華麗或夢幻）"
+  ],
+  "dims": {
+   "chair_type": [
+    "armchair",
+    "side chair",
+    "kids chair",
+    "novelty",
+    "vanity/stool"
+   ],
+   "pattern": [
+    "solid",
+    "floral",
+    "stripe/check/ikat",
+    "other"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "chair_type": "kids chair",
+     "pattern": "solid"
+    }
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {
+     "chair_type": "kids chair",
+     "pattern": "solid"
+    }
+   },
+   "a08": {
+    "label": "F",
+    "dims": {
+     "chair_type": "side chair",
+     "pattern": "other"
+    }
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "chair_type": "vanity/stool",
+     "pattern": "solid"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "floral"
+    }
+   },
+   "g02": {
+    "label": "F",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "floral"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "floral"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "chair_type": "side chair",
+     "pattern": "floral"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "solid"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "chair_type": "novelty",
+     "pattern": "other"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "floral"
+    }
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "chair_type": "side chair",
+     "pattern": "floral"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "chair_type": "kids chair",
+     "pattern": "other"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "floral"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "stripe/check/ikat"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "chair_type": "side chair",
+     "pattern": "floral"
+    }
+   },
+   "o04": {
+    "label": "F",
+    "dims": {}
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "stripe/check/ikat"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "solid"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "stripe/check/ikat"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "chair_type": "side chair",
+     "pattern": "stripe/check/ikat"
+    }
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "chair_type": "armchair",
+     "pattern": "stripe/check/ikat"
+    }
+   }
+  }
+ },
+ "11": {
+  "conditions": [
+   "單人扶手椅",
+   "深綠色",
+   "絨布",
+   "小空間尺度",
+   "沒有 roll arms",
+   "沒有 tufting"
+  ],
+  "dims": {
+   "silhouette": [
+    "barrel/curved",
+    "boxy/track",
+    "wood-frame lounge",
+    "sculptural"
+   ],
+   "base": [
+    "wood legs",
+    "metal legs/frame",
+    "upholstered/plinth"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "sculptural"
+    }
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "a08": {
+    "label": "P",
+    "dims": {
+     "base": "metal legs/frame",
+     "silhouette": "boxy/track"
+    }
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "wood-frame lounge"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "wood-frame lounge"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "wood-frame lounge"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "base": "metal legs/frame",
+     "silhouette": "boxy/track"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "base": "metal legs/frame",
+     "silhouette": "boxy/track"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "base": "metal legs/frame",
+     "silhouette": "boxy/track"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "sculptural"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "sculptural"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "barrel/curved"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "sculptural"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "base": "upholstered/plinth",
+     "silhouette": "sculptural"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "base": "wood legs",
+     "silhouette": "wood-frame lounge"
+    }
+   }
+  }
+ },
+ "13": {
+  "conditions": [
+   "圓形餐桌",
+   "42–48 吋（看圖無法確認時不扣分，標題明確不符才 F）",
+   "不是 pedestal（單一中柱）底座",
+   "不是玻璃桌面"
+  ],
+  "dims": {
+   "base": [
+    "4 legs",
+    "X/cross legs",
+    "trestle/angled"
+   ],
+   "top": [
+    "light wood",
+    "medium/dark wood",
+    "black",
+    "white/grey"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "medium/dark wood"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "base": "4 legs",
+     "top": "light wood"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "black"
+    }
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "medium/dark wood"
+    }
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "base": "4 legs",
+     "top": "light wood"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "medium/dark wood"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "medium/dark wood"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "base": "trestle/angled",
+     "top": "white/grey"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "base": "4 legs",
+     "top": "white/grey"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "base": "4 legs",
+     "top": "black"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "base": "trestle/angled",
+     "top": "medium/dark wood"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "base": "trestle/angled",
+     "top": "medium/dark wood"
+    }
+   },
+   "o07": {
+    "label": "F",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "light wood"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "base": "trestle/angled",
+     "top": "medium/dark wood"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "base": "trestle/angled",
+     "top": "white/grey"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "base": "X/cross legs",
+     "top": "light wood"
+    }
+   }
+  }
+ },
+ "26": {
+  "conditions": [
+   "浴室踏墊",
+   "看起來不像一般浴墊（像地毯、藝術品或特殊物件）"
+  ],
+  "dims": {
+   "material": [
+    "fabric/tufted",
+    "wood/bamboo",
+    "stone/diatomite",
+    "plastic/rubber"
+   ],
+   "look": [
+    "rug-like pattern",
+    "novelty/graphic",
+    "natural/spa"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "stone/diatomite"
+    }
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "wood/bamboo"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "wood/bamboo"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "wood/bamboo"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "stone/diatomite"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "look": "natural/spa",
+     "material": "wood/bamboo"
+    }
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "plastic/rubber"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "look": "rug-like pattern",
+     "material": "fabric/tufted"
+    }
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "look": "novelty/graphic",
+     "material": "fabric/tufted"
+    }
+   }
+  }
+ },
+ "28": {
+  "conditions": [
+   "地毯",
+   "花紋或混色能遮污漬",
+   "不是米色（主色不是 beige/cream）"
+  ],
+  "dims": {
+   "color": [
+    "green",
+    "blue",
+    "multicolor",
+    "red/burgundy",
+    "dark/charcoal"
+   ],
+   "pattern": [
+    "abstract/mottled",
+    "geometric",
+    "motif/floral",
+    "near-solid"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "color": "dark/charcoal",
+     "pattern": "motif/floral"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "color": "green",
+     "pattern": "motif/floral"
+    }
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "color": "blue",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "color": "green",
+     "pattern": "near-solid"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "color": "green",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "color": "multicolor",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "color": "blue",
+     "pattern": "geometric"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "color": "red/burgundy",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "color": "multicolor",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "color": "multicolor",
+     "pattern": "abstract/mottled"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "color": "blue",
+     "pattern": "motif/floral"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "color": "green",
+     "pattern": "near-solid"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "color": "green",
+     "pattern": "geometric"
+    }
+   }
+  }
+ },
+ "30": {
+  "conditions": [
+   "掛在沙發上方的牆面藝術",
+   "不是 live-laugh-love 式的量產制式裝飾",
+   "也不是 Rothko 色塊仿作"
+  ],
+  "dims": {
+   "subject": [
+    "abstract",
+    "figurative/people",
+    "nature/landscape",
+    "text/graphic"
+   ],
+   "palette": [
+    "neutral",
+    "blue/cool",
+    "colorful"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "abstract"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "abstract"
+    }
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "figurative/people"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "abstract"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "text/graphic"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "figurative/people"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "palette": "colorful",
+     "subject": "abstract"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "palette": "colorful",
+     "subject": "nature/landscape"
+    }
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "figurative/people"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "figurative/people"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "figurative/people"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "palette": "neutral",
+     "subject": "figurative/people"
+    }
+   },
+   "o05": {
+    "label": "F",
+    "dims": {}
+   },
+   "o06": {
+    "label": "F",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "abstract"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "figurative/people"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "figurative/people"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "palette": "blue/cool",
+     "subject": "abstract"
+    }
+   },
+   "o10": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "33": {
+  "conditions": [
+   "鏡子",
+   "不像飯店健身房的鏡子（無框大片玻璃、細銀框、LED 浴室鏡）"
+  ],
+  "dims": {
+   "shape": [
+    "rectangle",
+    "arch",
+    "organic/irregular",
+    "square/round"
+   ],
+   "frame": [
+    "thin metal/none",
+    "wood",
+    "ornate/decorative",
+    "LED"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "frame": "thin metal/none",
+     "shape": "rectangle"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {
+     "frame": "thin metal/none",
+     "shape": "arch"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "frame": "wood",
+     "shape": "rectangle"
+    }
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "frame": "LED",
+     "shape": "arch"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "frame": "thin metal/none",
+     "shape": "organic/irregular"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "organic/irregular"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "frame": "wood",
+     "shape": "rectangle"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "frame": "thin metal/none",
+     "shape": "rectangle"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "frame": "wood",
+     "shape": "rectangle"
+    }
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "arch"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "frame": "wood",
+     "shape": "organic/irregular"
+    }
+   },
+   "o01": {
+    "label": "F",
+    "dims": {}
+   },
+   "o02": {
+    "label": "F",
+    "dims": {}
+   },
+   "o03": {
+    "label": "F",
+    "dims": {
+     "frame": "thin metal/none",
+     "shape": "rectangle"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "square/round"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "square/round"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "square/round"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "frame": "wood",
+     "shape": "square/round"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "rectangle"
+    }
+   },
+   "o10": {
+    "label": "F",
+    "dims": {
+     "frame": "ornate/decorative",
+     "shape": "rectangle"
+    }
+   }
+  }
+ },
+ "38": {
+  "conditions": [
+   "扶手椅",
+   "可旋轉",
+   "低椅背",
+   "不是 club chair",
+   "不是 barrel chair",
+   "皮革"
+  ],
+  "dims": {
+   "color": [
+    "tan/cognac",
+    "dark brown",
+    "black/navy",
+    "other"
+   ],
+   "base": [
+    "disc/pedestal",
+    "star legs",
+    "wood plinth"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "base": "star legs",
+     "color": "dark brown"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "base": "star legs",
+     "color": "tan/cognac"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "base": "star legs",
+     "color": "tan/cognac"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "base": "disc/pedestal",
+     "color": "other"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "base": "star legs",
+     "color": "tan/cognac"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "base": "star legs",
+     "color": "black/navy"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "base": "disc/pedestal",
+     "color": "black/navy"
+    }
+   },
+   "o08": {
+    "label": "F",
+    "dims": {
+     "base": "wood plinth",
+     "color": "tan/cognac"
+    }
+   },
+   "o09": {
+    "label": "F",
+    "dims": {
+     "base": "disc/pedestal",
+     "color": "tan/cognac"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "base": "wood plinth",
+     "color": "tan/cognac"
+    }
+   }
+  }
+ },
+ "41": {
+  "conditions": [
+   "廚房烹飪用具組（多件）"
+  ],
+  "dims": {
+   "material": [
+    "silicone+wood",
+    "stainless steel",
+    "wood",
+    "mixed"
+   ],
+   "color": [
+    "black",
+    "cream/white",
+    "steel",
+    "natural wood",
+    "colored"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "a03": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "silicone+wood"
+    }
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "silicone+wood"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "color": "black",
+     "material": "mixed"
+    }
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "color": "black",
+     "material": "silicone+wood"
+    }
+   },
+   "a07": {
+    "label": "F",
+    "dims": {
+     "color": "colored",
+     "material": "silicone+wood"
+    }
+   },
+   "a08": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "silicone+wood"
+    }
+   },
+   "a09": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "mixed"
+    }
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "color": "black",
+     "material": "silicone+wood"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "mixed"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "color": "natural wood",
+     "material": "wood"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "color": "black",
+     "material": "mixed"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "mixed"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "color": "natural wood",
+     "material": "wood"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "silicone+wood"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "color": "cream/white",
+     "material": "silicone+wood"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "color": "black",
+     "material": "mixed"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "color": "colored",
+     "material": "mixed"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "color": "colored",
+     "material": "silicone+wood"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "color": "steel",
+     "material": "stainless steel"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "color": "natural wood",
+     "material": "wood"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "color": "natural wood",
+     "material": "wood"
+    }
+   }
+  }
+ },
+ "43": {
+  "conditions": [
+   "杯子",
+   "沒有把手"
+  ],
+  "dims": {
+   "material": [
+    "ceramic/stoneware",
+    "porcelain",
+    "glass",
+    "plastic/paper",
+    "metal"
+   ],
+   "color": [
+    "white/cream",
+    "grey/black",
+    "colored/pattern",
+    "natural/earthy"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "plastic/paper"
+    }
+   },
+   "a03": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "plastic/paper"
+    }
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "plastic/paper"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "plastic/paper"
+    }
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "plastic/paper"
+    }
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "color": "natural/earthy",
+     "material": "plastic/paper"
+    }
+   },
+   "a08": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "a09": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "porcelain"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "color": "natural/earthy",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "plastic/paper"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "porcelain"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "porcelain"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "plastic/paper"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "porcelain"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "color": "white/cream",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "color": "grey/black",
+     "material": "metal"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "color": "natural/earthy",
+     "material": "ceramic/stoneware"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "porcelain"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "glass"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "color": "colored/pattern",
+     "material": "plastic/paper"
+    }
+   }
+  }
+ },
+ "44": {
+  "conditions": [
+   "沙發",
+   "造型像一對嘴唇",
+   "粉色"
+  ],
+  "dims": {
+   "shade": [
+    "hot pink/magenta",
+    "deep pink/raspberry",
+    "pale/blush",
+    "red"
+   ],
+   "design": [
+    "full lips (Bocca)",
+    "lip-shaped back",
+    "abstract"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {
+     "design": "full lips (Bocca)",
+     "shade": "red"
+    }
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "deep pink/raspberry"
+    }
+   },
+   "g04": {
+    "label": "F",
+    "dims": {
+     "design": "full lips (Bocca)",
+     "shade": "red"
+    }
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "hot pink/magenta"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "design": "full lips (Bocca)",
+     "shade": "hot pink/magenta"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "pale/blush"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "design": "full lips (Bocca)",
+     "shade": "hot pink/magenta"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "deep pink/raspberry"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "deep pink/raspberry"
+    }
+   },
+   "o04": {
+    "label": "F",
+    "dims": {}
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "design": "lip-shaped back",
+     "shade": "deep pink/raspberry"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "design": "full lips (Bocca)",
+     "shade": "hot pink/magenta"
+    }
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "design": "abstract",
+     "shade": "pale/blush"
+    }
+   }
+  }
+ },
+ "49": {
+  "conditions": [
+   "咖啡桌",
+   "義大利莊園（villa）感：石材、灰泥、溫暖大地色",
+   "極簡"
+  ],
+  "dims": {
+   "material": [
+    "travertine/marble",
+    "plaster/concrete look",
+    "glass",
+    "wood"
+   ],
+   "shape": [
+    "rectangle",
+    "round/oval/organic",
+    "square"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "P",
+    "dims": {
+     "material": "plaster/concrete look",
+     "shape": "round/oval/organic"
+    }
+   },
+   "a03": {
+    "label": "P",
+    "dims": {
+     "material": "travertine/marble",
+     "shape": "rectangle"
+    }
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "material": "travertine/marble",
+     "shape": "rectangle"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "material": "travertine/marble",
+     "shape": "rectangle"
+    }
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "material": "plaster/concrete look",
+     "shape": "round/oval/organic"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "F",
+    "dims": {}
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "material": "glass",
+     "shape": "round/oval/organic"
+    }
+   },
+   "o03": {
+    "label": "F",
+    "dims": {
+     "material": "wood",
+     "shape": "rectangle"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "material": "glass",
+     "shape": "round/oval/organic"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "material": "glass",
+     "shape": "round/oval/organic"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "material": "glass",
+     "shape": "round/oval/organic"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "material": "travertine/marble",
+     "shape": "square"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "material": "travertine/marble",
+     "shape": "square"
+    }
+   },
+   "o09": {
+    "label": "F",
+    "dims": {
+     "material": "wood",
+     "shape": "square"
+    }
+   },
+   "o10": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "50": {
+  "conditions": [
+   "毯子（throw blanket）",
+   "北歐風（簡約、天然材質）",
+   "灰色或淺藍色"
+  ],
+  "dims": {
+   "texture": [
+    "chunky/cable knit",
+    "waffle/woven",
+    "fleece/plush",
+    "gauze/muslin",
+    "wool/mohair"
+   ],
+   "pattern": [
+    "solid",
+    "stripe/check",
+    "nordic motif/blocks"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {
+     "pattern": "solid",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "waffle/woven"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "gauze/muslin"
+    }
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "waffle/woven"
+    }
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "waffle/woven"
+    }
+   },
+   "a08": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "fleece/plush"
+    }
+   },
+   "a09": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "waffle/woven"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "gauze/muslin"
+    }
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "wool/mohair"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "waffle/woven"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "pattern": "nordic motif/blocks",
+     "texture": "wool/mohair"
+    }
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "waffle/woven"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "pattern": "nordic motif/blocks",
+     "texture": "wool/mohair"
+    }
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "wool/mohair"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "pattern": "stripe/check",
+     "texture": "wool/mohair"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "wool/mohair"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "fleece/plush"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "gauze/muslin"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "chunky/cable knit"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "wool/mohair"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "pattern": "nordic motif/blocks",
+     "texture": "wool/mohair"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "pattern": "nordic motif/blocks",
+     "texture": "fleece/plush"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "pattern": "solid",
+     "texture": "wool/mohair"
+    }
+   }
+  }
+ },
+ "71": {
+  "conditions": [
+   "酒櫃",
+   "Art Deco 風格",
+   "祖母綠漆面",
+   "黃銅鑲嵌"
+  ],
+  "dims": {
+   "form": [
+    "cabinet on legs/stand",
+    "sideboard",
+    "tall cabinet"
+   ],
+   "era": [
+    "vintage",
+    "contemporary"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "sideboard"
+    }
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "sideboard"
+    }
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {
+     "era": "vintage",
+     "form": "sideboard"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "era": "vintage",
+     "form": "tall cabinet"
+    }
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "era": "vintage",
+     "form": "cabinet on legs/stand"
+    }
+   },
+   "o01": {
+    "label": "F",
+    "dims": {}
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "cabinet on legs/stand"
+    }
+   },
+   "o03": {
+    "label": "F",
+    "dims": {}
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "tall cabinet"
+    }
+   },
+   "o05": {
+    "label": "F",
+    "dims": {}
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "cabinet on legs/stand"
+    }
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "era": "contemporary",
+     "form": "cabinet on legs/stand"
+    }
+   }
+  }
+ },
+ "72": {
+  "conditions": [
+   "邊桌",
+   "Memphis 風格",
+   "水磨石（terrazzo）桌面",
+   "波浪（squiggle）桌腳"
+  ],
+  "dims": {
+   "base": [
+    "pedestal",
+    "legs",
+    "wire",
+    "solid drum"
+   ],
+   "terrazzo": [
+    "white multicolor",
+    "black",
+    "grey"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "F",
+    "dims": {}
+   },
+   "o02": {
+    "label": "F",
+    "dims": {}
+   },
+   "o03": {
+    "label": "F",
+    "dims": {}
+   },
+   "o04": {
+    "label": "F",
+    "dims": {}
+   },
+   "o05": {
+    "label": "F",
+    "dims": {}
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "F",
+    "dims": {}
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "74": {
+  "conditions": [
+   "咖啡桌",
+   "洞石（travertine）",
+   "橢圓形",
+   "厚重（chunky）",
+   "1970 年代義大利（古董或明顯該風格）"
+  ],
+  "dims": {
+   "base": [
+    "slab/blade legs",
+    "pedestal/plinth",
+    "sculptural"
+   ],
+   "top": [
+    "solid travertine",
+    "glass over travertine"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "base": "sculptural",
+     "top": "solid travertine"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "g04": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "g05": {
+    "label": "P",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "g06": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "g08": {
+    "label": "P",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "base": "sculptural",
+     "top": "glass over travertine"
+    }
+   },
+   "o03": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "o04": {
+    "label": "F",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "base": "sculptural",
+     "top": "glass over travertine"
+    }
+   },
+   "o06": {
+    "label": "P",
+    "dims": {
+     "base": "slab/blade legs",
+     "top": "solid travertine"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "base": "sculptural",
+     "top": "glass over travertine"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "base": "pedestal/plinth",
+     "top": "solid travertine"
+    }
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o10": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "75": {
+  "conditions": [
+   "落地燈",
+   "糖果粉色",
+   "球形燈罩",
+   "後現代風格（玩味造型；這點我放寬）"
+  ],
+  "dims": {
+   "globes": [
+    "single",
+    "multi"
+   ],
+   "stand": [
+    "straight pole",
+    "arc/hook",
+    "tripod",
+    "sculptural/stacked"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "g02": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "sculptural/stacked"
+    }
+   },
+   "g03": {
+    "label": "F",
+    "dims": {
+     "globes": "single",
+     "stand": "arc/hook"
+    }
+   },
+   "g04": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "tripod"
+    }
+   },
+   "g07": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "sculptural/stacked"
+    }
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "P",
+    "dims": {
+     "globes": "multi",
+     "stand": "straight pole"
+    }
+   },
+   "g10": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "arc/hook"
+    }
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "sculptural/stacked"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "straight pole"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "straight pole"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "straight pole"
+    }
+   },
+   "o05": {
+    "label": "P",
+    "dims": {
+     "globes": "single",
+     "stand": "straight pole"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "F",
+    "dims": {}
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o10": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "76": {
+  "conditions": [
+   "陶瓷花瓶",
+   "侘寂（wabi-sabi）",
+   "柴燒感",
+   "不對稱",
+   "牛血紅（oxblood）釉"
+  ],
+  "dims": {
+   "size": [
+    "small/bud",
+    "medium",
+    "tall"
+   ],
+   "form": [
+    "round/bulbous",
+    "bottle/narrow neck",
+    "irregular/sculptural"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "form": "irregular/sculptural",
+     "size": "medium"
+    }
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {
+     "form": "bottle/narrow neck",
+     "size": "tall"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {
+     "form": "bottle/narrow neck",
+     "size": "medium"
+    }
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "form": "irregular/sculptural",
+     "size": "tall"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "form": "irregular/sculptural",
+     "size": "medium"
+    }
+   },
+   "o03": {
+    "label": "F",
+    "dims": {}
+   },
+   "o04": {
+    "label": "F",
+    "dims": {}
+   },
+   "o05": {
+    "label": "F",
+    "dims": {
+     "form": "irregular/sculptural",
+     "size": "medium"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "F",
+    "dims": {}
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   }
+  }
+ },
+ "8": {
+  "conditions": [
+   "照明產品",
+   "營造昏暗、暖光、私密的氛圍（東京深夜 cocktail bar）"
+  ],
+  "dims": {
+   "fixture": [
+    "pendant",
+    "table/portable",
+    "floor",
+    "wall",
+    "strip/bulb",
+    "sign"
+   ],
+   "material": [
+    "paper/fabric",
+    "wood/rattan",
+    "glass",
+    "metal/stone"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "P",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "paper/fabric"
+    }
+   },
+   "a06": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "metal/stone"
+    }
+   },
+   "a07": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "wood/rattan"
+    }
+   },
+   "a08": {
+    "label": "P",
+    "dims": {
+     "fixture": "wall",
+     "material": "wood/rattan"
+    }
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "P",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "glass"
+    }
+   },
+   "g01": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "wood/rattan"
+    }
+   },
+   "g02": {
+    "label": "F",
+    "dims": {
+     "fixture": "pendant",
+     "material": "wood/rattan"
+    }
+   },
+   "g03": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "wood/rattan"
+    }
+   },
+   "g04": {
+    "label": "F",
+    "dims": {
+     "fixture": "strip/bulb",
+     "material": "metal/stone"
+    }
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {}
+   },
+   "g07": {
+    "label": "F",
+    "dims": {}
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "fixture": "floor",
+     "material": "metal/stone"
+    }
+   },
+   "o02": {
+    "label": "P",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "paper/fabric"
+    }
+   },
+   "o03": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "glass"
+    }
+   },
+   "o04": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "glass"
+    }
+   },
+   "o05": {
+    "label": "F",
+    "dims": {
+     "fixture": "pendant",
+     "material": "metal/stone"
+    }
+   },
+   "o06": {
+    "label": "F",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "glass"
+    }
+   },
+   "o07": {
+    "label": "P",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "paper/fabric"
+    }
+   },
+   "o08": {
+    "label": "P",
+    "dims": {
+     "fixture": "table/portable",
+     "material": "metal/stone"
+    }
+   },
+   "o09": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "metal/stone"
+    }
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "fixture": "pendant",
+     "material": "glass"
+    }
+   }
+  }
+ },
+ "86": {
+  "conditions": [
+   "人體工學辦公椅（有滾輪）",
+   "不是全黑網布",
+   "胡桃木框架",
+   "干邑色（cognac）皮革"
+  ],
+  "dims": {
+   "back": [
+    "mid back",
+    "high back"
+   ],
+   "base": [
+    "metal star",
+    "wood star"
+   ]
+  },
+  "conditionsOk": true,
+  "comment": "",
+  "done": true,
+  "items": {
+   "a01": {
+    "label": "F",
+    "dims": {}
+   },
+   "a02": {
+    "label": "F",
+    "dims": {}
+   },
+   "a03": {
+    "label": "F",
+    "dims": {}
+   },
+   "a04": {
+    "label": "F",
+    "dims": {}
+   },
+   "a05": {
+    "label": "F",
+    "dims": {}
+   },
+   "a06": {
+    "label": "F",
+    "dims": {}
+   },
+   "a07": {
+    "label": "F",
+    "dims": {}
+   },
+   "a08": {
+    "label": "F",
+    "dims": {}
+   },
+   "a09": {
+    "label": "F",
+    "dims": {}
+   },
+   "a10": {
+    "label": "F",
+    "dims": {}
+   },
+   "g01": {
+    "label": "F",
+    "dims": {}
+   },
+   "g02": {
+    "label": "F",
+    "dims": {}
+   },
+   "g03": {
+    "label": "F",
+    "dims": {}
+   },
+   "g04": {
+    "label": "F",
+    "dims": {}
+   },
+   "g05": {
+    "label": "F",
+    "dims": {}
+   },
+   "g06": {
+    "label": "F",
+    "dims": {
+     "back": "high back",
+     "base": "wood star"
+    }
+   },
+   "g07": {
+    "label": "F",
+    "dims": {
+     "back": "high back",
+     "base": "wood star"
+    }
+   },
+   "g08": {
+    "label": "F",
+    "dims": {}
+   },
+   "g09": {
+    "label": "F",
+    "dims": {
+     "back": "mid back",
+     "base": "wood star"
+    }
+   },
+   "g10": {
+    "label": "F",
+    "dims": {}
+   },
+   "o01": {
+    "label": "P",
+    "dims": {
+     "back": "high back",
+     "base": "wood star"
+    }
+   },
+   "o02": {
+    "label": "F",
+    "dims": {}
+   },
+   "o03": {
+    "label": "F",
+    "dims": {}
+   },
+   "o04": {
+    "label": "F",
+    "dims": {}
+   },
+   "o05": {
+    "label": "F",
+    "dims": {}
+   },
+   "o06": {
+    "label": "F",
+    "dims": {}
+   },
+   "o07": {
+    "label": "F",
+    "dims": {}
+   },
+   "o08": {
+    "label": "F",
+    "dims": {}
+   },
+   "o09": {
+    "label": "F",
+    "dims": {}
+   },
+   "o10": {
+    "label": "P",
+    "dims": {
+     "back": "mid back",
+     "base": "metal star"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1189 @@
+{
+  "description": "Multi-label, transparent rule-based taxonomy; manually audit before publication.",
+  "label_definitions": {
+    "negation": "negation",
+    "numeric_or_budget_constraint": "numeric or budget constraint",
+    "subjective_aesthetic": "subjective aesthetic",
+    "contextual_or_pragmatic": "contextual or pragmatic",
+    "functional_or_use_constraint": "functional or use constraint",
+    "cultural_or_style_reference": "cultural or style reference",
+    "multi_constraint": "multiple independent constraints",
+    "ordinary_product_query": "no special rule matched"
+  },
+  "rows": [
+    {
+      "query_id": 1,
+      "canonical_query": "Pink and white chairs fairytale",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 2,
+      "canonical_query": "weird looking objects. Weirder the better.",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 5,
+      "canonical_query": "messy painting of a bridge, under 1000, for my home office",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "contextual_or_pragmatic": 2,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 6,
+      "canonical_query": "A sofa my husband won't call feminine and i won't call a man cave",
+      "tags": [
+        "negation",
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "subjective_aesthetic": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 7,
+      "canonical_query": "blackout curtains that don't make my bedroom look like a Marriott",
+      "tags": [
+        "subjective_aesthetic",
+        "contextual_or_pragmatic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1,
+        "contextual_or_pragmatic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 8,
+      "canonical_query": "lighting that makes my apartment feel like a Tokyo cocktail bar at 11pm",
+      "tags": [
+        "subjective_aesthetic",
+        "contextual_or_pragmatic",
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1,
+        "contextual_or_pragmatic": 1,
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 9,
+      "canonical_query": "counter stools for a 4'11\" partner and a 6'3\" man",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "contextual_or_pragmatic": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 10,
+      "canonical_query": "small apartment couch nye",
+      "tags": [
+        "contextual_or_pragmatic"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 11,
+      "canonical_query": "moody dark-green velvet armchair for a small apartment, no roll arms, no tufting",
+      "tags": [
+        "negation",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "contextual_or_pragmatic": 2,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 12,
+      "canonical_query": "outdoor coffee table that won't blow over in wind, not aluminum or wicker",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "numeric_or_budget_constraint": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 13,
+      "canonical_query": "round dining table, 42-48 inches, no pedestal base, no glass top",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "numeric_or_budget_constraint": 2,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 14,
+      "canonical_query": "Gross looking art",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 15,
+      "canonical_query": "lamp that won't wake my partner if I read at 3am",
+      "tags": [
+        "negation",
+        "contextual_or_pragmatic"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "contextual_or_pragmatic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 16,
+      "canonical_query": "frame for a 1970s polish movie poster",
+      "tags": [
+        "contextual_or_pragmatic",
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 1,
+        "cultural_or_style_reference": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 17,
+      "canonical_query": "dining set like the one in Past Lives",
+      "tags": [
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 18,
+      "canonical_query": "bedroom furniture similar to call me by your name",
+      "tags": [
+        "contextual_or_pragmatic",
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 1,
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 19,
+      "canonical_query": "a chair that's comfortable for crying in",
+      "tags": [
+        "contextual_or_pragmatic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 1,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 20,
+      "canonical_query": "pillow for back and stomach sleepers",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 21,
+      "canonical_query": "Art to fill an awkward 3 foot vertical strip of wall",
+      "tags": [
+        "numeric_or_budget_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 22,
+      "canonical_query": "Something to put on a weirdly deep windowsill",
+      "tags": [
+        "ordinary_product_query"
+      ],
+      "rule_evidence": {},
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 23,
+      "canonical_query": "king bed frame under 14 inches tall, no platform look",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 3,
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 24,
+      "canonical_query": "desk for a 5'0 person, not a kids desk",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 1,
+        "contextual_or_pragmatic": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 25,
+      "canonical_query": "tall floor lamp for a room with 11 foot ceilings that doesn't look stubby",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 2,
+        "subjective_aesthetic": 1,
+        "contextual_or_pragmatic": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 26,
+      "canonical_query": "bath mat that doesn't look like a bath mat",
+      "tags": [
+        "negation",
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 27,
+      "canonical_query": "coffee table that looks expensive but is budget",
+      "tags": [
+        "subjective_aesthetic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 28,
+      "canonical_query": "rug that hides cat puke but isn't beige",
+      "tags": [
+        "negation",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 29,
+      "canonical_query": "bookshelf that doesn't scream IKEA but I have an IKEA budget",
+      "tags": [
+        "negation",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 30,
+      "canonical_query": "art for above the couch that isn't a live laugh love situation but also not a Rothko knockoff",
+      "tags": [
+        "negation",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 31,
+      "canonical_query": "dresser that looks like it has a past",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 32,
+      "canonical_query": "couches, chairs and seating",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 33,
+      "canonical_query": "mirror that doesn't look like it's from a hotel gym",
+      "tags": [
+        "negation",
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 34,
+      "canonical_query": "dining table that seats 6, fits in a NYC apartment, kid-friendly, not round, under $1500",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 4,
+        "contextual_or_pragmatic": 3,
+        "functional_or_use_constraint": 2,
+        "multi_constraint": 5
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 35,
+      "canonical_query": "sofa: pet-friendly fabric, removable covers, no chaise, deeper than standard, ships flat",
+      "tags": [
+        "negation",
+        "contextual_or_pragmatic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "contextual_or_pragmatic": 1,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 36,
+      "canonical_query": "rug 8x10, low pile, washable, not synthetic-looking, under $600, not \"boho\"",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "numeric_or_budget_constraint": 4,
+        "subjective_aesthetic": 2,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 5
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 37,
+      "canonical_query": "desk: standing height capable, solid wood top, no MDF, fits a 27\" monitor and a printer",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 1,
+        "functional_or_use_constraint": 3,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 38,
+      "canonical_query": "armchair that swivels, has a low back, isn't a club chair, isn't a barrel chair, in leather",
+      "tags": [
+        "negation",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "multi_constraint": 5
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 39,
+      "canonical_query": "bookcase that's open back, no visible hardware, depth at least 12 inches, walnut not oak",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 2,
+        "numeric_or_budget_constraint": 3,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 40,
+      "canonical_query": "bed frame with under-bed storage that isn't a captain's bed or a platform with drawers",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 1,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 41,
+      "canonical_query": "kitchen utensils set",
+      "tags": [
+        "ordinary_product_query"
+      ],
+      "rule_evidence": {},
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 42,
+      "canonical_query": "A trash can that doesn't ruin the room",
+      "tags": [
+        "negation"
+      ],
+      "rule_evidence": {
+        "negation": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 43,
+      "canonical_query": "cups without a handle",
+      "tags": [
+        "negation",
+        "functional_or_use_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "functional_or_use_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 44,
+      "canonical_query": "couch that looks like a pair of pink lips",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 45,
+      "canonical_query": "dining table that seats 6 but looks like a 4 seater",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "subjective_aesthetic": 1,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 46,
+      "canonical_query": "biophilic looking furniture, inspired by trees",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 47,
+      "canonical_query": "boho vanity",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 48,
+      "canonical_query": "blue and white cup, delicate looking for a present",
+      "tags": [
+        "subjective_aesthetic",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1,
+        "contextual_or_pragmatic": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 49,
+      "canonical_query": "italian villa inspired coffee table minimalist",
+      "tags": [
+        "subjective_aesthetic",
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1,
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 50,
+      "canonical_query": "scandinavian throw blanket grey or light blue",
+      "tags": [
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 51,
+      "canonical_query": "laundry hamper I won't hate looking at for 10 years",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 1,
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 52,
+      "canonical_query": "cutting board quirky and fun",
+      "tags": [
+        "ordinary_product_query"
+      ],
+      "rule_evidence": {},
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 53,
+      "canonical_query": "bedroom furniture under 200",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "contextual_or_pragmatic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 54,
+      "canonical_query": "rug for an open plan space where the kitchen, dining, and living blur together",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 55,
+      "canonical_query": "pendant light over an island with some weight to it, sculptural",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 1,
+        "subjective_aesthetic": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 56,
+      "canonical_query": "pot rack that disappears when it's not in use",
+      "tags": [
+        "negation",
+        "functional_or_use_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "functional_or_use_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 57,
+      "canonical_query": "cabinet pulls with the patina of something old",
+      "tags": [
+        "ordinary_product_query"
+      ],
+      "rule_evidence": {},
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 58,
+      "canonical_query": "open shelving styling for a kitchen someone actually cooks in",
+      "tags": [
+        "contextual_or_pragmatic"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 59,
+      "canonical_query": "spice storage that scales to 40+ spices",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "functional_or_use_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 1,
+        "functional_or_use_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 60,
+      "canonical_query": "kitchen runner that wipes clean",
+      "tags": [
+        "functional_or_use_constraint"
+      ],
+      "rule_evidence": {
+        "functional_or_use_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 61,
+      "canonical_query": "one glass that works for wine, water, and whiskey",
+      "tags": [
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 5
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 62,
+      "canonical_query": "freestanding sculptural room divider in wood slats or fluted glass",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 63,
+      "canonical_query": "plant stand that reads as a side table for a 5-foot fiddle leaf",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "contextual_or_pragmatic": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 64,
+      "canonical_query": "stone or wood catchall bowl with weight",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 65,
+      "canonical_query": "wall-mounted magazine rack with vertical slots",
+      "tags": [
+        "functional_or_use_constraint"
+      ],
+      "rule_evidence": {
+        "functional_or_use_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 66,
+      "canonical_query": "cabinet sized to hide a litter box, with ventilation",
+      "tags": [
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 67,
+      "canonical_query": "wallpaper with a hand-drawn or hand-printed quality",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 68,
+      "canonical_query": "peel-and-stick tile that passes for real tile",
+      "tags": [
+        "ordinary_product_query",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 69,
+      "canonical_query": "vertical board-and-batten in a modern proportion",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 70,
+      "canonical_query": "DIY built-in bookcase that looks site-built using stock cabinets",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 71,
+      "canonical_query": "art Deco bar cabinet in emerald lacquer with brass inlay",
+      "tags": [
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 72,
+      "canonical_query": "memphis Group side table, terrazzo top, squiggle legs",
+      "tags": [
+        "cultural_or_style_reference",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 73,
+      "canonical_query": "bauhaus tubular steel daybed in cognac leather",
+      "tags": [
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 74,
+      "canonical_query": "1970s Italian travertine coffee table, oval, chunky",
+      "tags": [
+        "cultural_or_style_reference",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 75,
+      "canonical_query": "postmodern floor lamp in candy pink with a globe shade",
+      "tags": [
+        "subjective_aesthetic"
+      ],
+      "rule_evidence": {
+        "subjective_aesthetic": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 76,
+      "canonical_query": "wabi-sabi ceramic vase, wood-fired, asymmetric, oxblood glaze",
+      "tags": [
+        "cultural_or_style_reference",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 77,
+      "canonical_query": "shaker peg rail in walnut, 4 feet long",
+      "tags": [
+        "numeric_or_budget_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 78,
+      "canonical_query": "victorian rolltop desk in dark oak with original brass",
+      "tags": [
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 79,
+      "canonical_query": "brutalist concrete planter, raw finish, 18 inches tall",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 80,
+      "canonical_query": "french country dough bowl in bleached oak, 24 inches long",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "cultural_or_style_reference"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "cultural_or_style_reference": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 81,
+      "canonical_query": "outdoor lounge chair in teak that grays gracefully, deep seat, low to ground",
+      "tags": [
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 82,
+      "canonical_query": "cantilever patio umbrella, 11-foot, in olive or rust, with a fillable base",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "multi_constraint": 5
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 83,
+      "canonical_query": "sculptural fire pit in corten steel, wood-burning, 30 inches across",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "subjective_aesthetic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "subjective_aesthetic": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 84,
+      "canonical_query": "glazed terracotta planter, 24 inches, with drainage, frost-proof",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 2,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 85,
+      "canonical_query": "string lights for a city balcony, warm white, weatherproof, on a dimmer",
+      "tags": [
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 3,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 86,
+      "canonical_query": "ergonomic task chair in a real color, not all-black mesh — walnut frame, cognac leather",
+      "tags": [
+        "negation",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 87,
+      "canonical_query": "picture light over a 36-inch canvas, brass, plug-in not hardwired",
+      "tags": [
+        "negation",
+        "numeric_or_budget_constraint",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "numeric_or_budget_constraint": 3,
+        "functional_or_use_constraint": 2,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 88,
+      "canonical_query": "pair of plug-in wall sconces for a rental, swing-arm, brass and linen",
+      "tags": [
+        "contextual_or_pragmatic",
+        "functional_or_use_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "contextual_or_pragmatic": 2,
+        "functional_or_use_constraint": 1,
+        "multi_constraint": 4
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 90,
+      "canonical_query": "hand-thrown dinner plates with irregular edges, set of 4, charcoal glaze",
+      "tags": [
+        "numeric_or_budget_constraint",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 1,
+        "multi_constraint": 3
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 92,
+      "canonical_query": "tall taper candleholders in colored glass, mismatched as a set",
+      "tags": [
+        "ordinary_product_query"
+      ],
+      "rule_evidence": {},
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 94,
+      "canonical_query": "sculptural ceramic vessel for a console — body of work, not flowers",
+      "tags": [
+        "negation",
+        "subjective_aesthetic",
+        "contextual_or_pragmatic",
+        "multi_constraint"
+      ],
+      "rule_evidence": {
+        "negation": 1,
+        "subjective_aesthetic": 1,
+        "contextual_or_pragmatic": 1,
+        "multi_constraint": 2
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    },
+    {
+      "query_id": 95,
+      "canonical_query": "bathroom faucet in unlacquered brass that will patina over years",
+      "tags": [
+        "numeric_or_budget_constraint"
+      ],
+      "rule_evidence": {
+        "numeric_or_budget_constraint": 1
+      },
+      "annotation_status": "rule_based_needs_manual_audit"
+    }
+  ]
+}

@@ -12,8 +12,12 @@ Usage: python run_pilot2.py [--model qwen3-vl-8b-bnb4] [--url http://127.0.0.1:8
        python run_pilot2.py --backend gemini --model gemini-3.1-flash-lite
 (the gemini backend calls Google AI Studio with the key in ~/.config/gemini_api_key)
 Writes pilot2/<model>_captions.jsonl and pilot2/<model>_<condition>.jsonl (resumable).
+
+--order-seed S shows the 20 candidates in a different order (random.Random(f"{S}-{qid}")), reuses the
+model's captions, and writes pilot2/<model>_o<S>_<condition>.jsonl. selected_positions there are mapped
+back to the original positions (so score_pilot2.py works unchanged); shown_positions are what the model saw.
 """
-import argparse, base64, io, json, os, re, time, urllib.error, urllib.request
+import argparse, base64, io, json, os, random, re, time, urllib.error, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from PIL import Image
@@ -82,7 +86,12 @@ def select(url, model, q, cond, caption):
                     '{"selected_positions":[<position>, ...],"selection_notes":"<一句話說明為什麼這樣選>"}。'
                     f"selected_positions 使用 1-based position，剛好 {K} 個且不得重複；請根據圖片和標題實際判斷後再選。"})
     text, usage = post(url, model, content, 400)
-    parsed = parse_json(text)
+    try: parsed = parse_json(text)
+    except json.JSONDecodeError:
+        # malformed JSON elsewhere (e.g. an unescaped quote in selection_notes): keep only the selection
+        m = re.search(r'"selected_positions"\s*:\s*\[([\d,\s]*)\]', text)
+        if not m: raise
+        parsed = {"selected_positions": [int(x) for x in re.findall(r"\d+", m.group(1))], "selection_notes": "(notes unparsable) " + text[:300]}
     sel = parsed.get("selected_positions", [])
     if not isinstance(sel, list) or len(sel) != K or len(set(sel)) != K or any(not isinstance(x, int) or not 1 <= x <= len(q["candidates"]) for x in sel):
         raise ValueError(f"invalid selection {sel}")
@@ -97,6 +106,7 @@ def main():
     global BACKEND
     ap = argparse.ArgumentParser(); ap.add_argument("--model", default="qwen3-vl-8b-bnb4"); ap.add_argument("--url", default="http://127.0.0.1:8021/v1/chat/completions")
     ap.add_argument("--backend", choices=["openai", "gemini"], default="openai"); ap.add_argument("--conditions", default="full,caption,blind")
+    ap.add_argument("--order-seed", type=int, default=None)
     a = ap.parse_args(); BACKEND = a.backend; conds = a.conditions.split(",")
     labels = json.load(open(HERE / "human_labels.json"))
     qs = [q for q in json.load(open(HERE / "questions.json")) if labels[q["qid"]]["query"] != "N"]
@@ -123,16 +133,24 @@ def main():
             print("caption", q["qid"], text.strip()[:100], flush=True)
     captions = {r["qid"]: r["caption"] for r in map(json.loads, cap_path.read_text().splitlines()) if r.get("status") == "ok"} if cap_path.exists() else {}
 
+    tag = a.model if a.order_seed is None else f"{a.model}_o{a.order_seed}"
     for cond in [c for c in ("full", "caption", "blind") if c in conds]:
-        out = HERE / f"{a.model}_{cond}.jsonl"; have = done_ids(out)
+        out = HERE / f"{tag}_{cond}.jsonl"; have = done_ids(out)
         with open(out, "a") as fh:
             for q in qs:
                 if q["qid"] in have: continue
                 if cond == "caption" and q["qid"] not in captions: print("caption", q["qid"], "skipped: no caption yet", flush=True); continue
+                shown, orig = q, None
+                if a.order_seed is not None:
+                    cands = list(q["candidates"]); random.Random(f"{a.order_seed}-{q['qid']}").shuffle(cands)
+                    orig = [c["pos"] for c in cands]
+                    shown = dict(q, candidates=[dict(c, pos=i) for i, c in enumerate(cands, 1)])
                 for attempt in range(1, 4):
                     try:
-                        sel, notes, usage = select(a.url, a.model, q, cond, captions.get(q["qid"]))
-                        fh.write(json.dumps({"qid": q["qid"], "condition": cond, "model": a.model, "k": K, "selected_positions": sel, "selection_notes": notes,
+                        sel, notes, usage = select(a.url, a.model, shown, cond, captions.get(q["qid"]))
+                        extra = {} if orig is None else {"order_seed": a.order_seed, "shown_positions": sel}
+                        if orig is not None: sel = [orig[x - 1] for x in sel]
+                        fh.write(json.dumps({"qid": q["qid"], "condition": cond, "model": a.model, "k": K, "selected_positions": sel, **extra, "selection_notes": notes,
                                              "status": "ok", "attempt": attempt, "usage": usage, "finished_at": datetime.now(timezone.utc).isoformat()}, ensure_ascii=False) + "\n")
                         fh.flush(); print(cond, q["qid"], sel, flush=True)
                         if BACKEND == "gemini": time.sleep(6)

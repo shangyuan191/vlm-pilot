@@ -29,6 +29,7 @@ pilot1/
   score_k.py                        Oracle / Top-K / Random 期望值 / 模型的符合數與 diversity
   human_labels.json                 人工標注（591 個商品）
   {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4,llava-ov-7b-fp8}_k{3,5}_selection.jsonl   模型輸出
+  internvl3-8b-bnb4-6tile_k3_selection.jsonl   InternVL3 每張圖最多 6 塊的解析度對照
 pilot2/
   build_pilot2.py                   建前 20 題（seed 20261101）
   build_pilot2_extra.py             追加 7 題人工挑選的題目圖（seed 20261102）
@@ -38,6 +39,7 @@ pilot2/
   run_pilot2.py                     Caption 描述 + Full / Caption / Blind 選擇（vLLM 或 Gemini）
   score_pilot2.py                   評分
   {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4,llava-ov-7b-fp8}_{captions,full,caption,blind}.jsonl   模型輸出
+  <同上>_o{1,2}_{full,caption,blind}.jsonl   換候選順序（run_pilot2.py --order-seed 1、2）
 scripts/serve_qwen3vl.sh            起 Qwen3-VL-8B 的 vLLM server
 scripts/serve_internvl3.sh          起 InternVL3-8B 的 vLLM server（每張圖 1 塊 448×448）
 scripts/serve_llava_ov.sh           起 LLaVA-OV-7B 的 vLLM server（FP8，每張圖 384×384）
@@ -57,6 +59,7 @@ python score_pilot2.py --model qwen3-vl-8b-bnb4
 python score_pilot2.py --model gemini-3.1-flash-lite
 python score_pilot2.py --model internvl3-8b-bnb4
 python score_pilot2.py --model llava-ov-7b-fp8
+python score_pilot2.py --model qwen3-vl-8b-bnb4_o1     # 換順序：模型名稱加 _o1、_o2
 ```
 
 檢查點：Pilot 1 K = 3 應印出 `Oracle pass 2.22/3 (74%)`、`qwen4bit pass 1.75/3 (58%)`、`lite pass 1.85/3 (62%)`、`internvl pass 1.57/3 (52%)`、`llava pass 1.70/3 (57%)`；Pilot 2 Flash-Lite 應是 Full 1.50、Caption 1.70、Blind 1.05。
@@ -156,7 +159,22 @@ cd ..
 python pilot2/run_pilot2.py --model llava-ov-7b-fp8 --url http://127.0.0.1:8032/v1/chat/completions
 ```
 
-vLLM 0.25.1 不支援這個模型的 bitsandbytes 4-bit，所以用 FP8。`serve_llava_ov.sh` 會建 `models/llava-onevision-qwen2-7b-ov-hf-384`，把 `image_grid_pinpoints` 改成 `[[384, 384]]`，讓 Pilot 2 的 21 張圖放得進 32k 上下文。Pilot 2 Full 的 mid-century-1 目前缺一筆：模型連續 3 次回傳無法解析的 JSON；`run_pilot2.py` 現在遇到這種情況會只抓出 `selected_positions`，重跑會補上。
+vLLM 0.25.1 不支援這個模型的 bitsandbytes 4-bit，所以用 FP8。`serve_llava_ov.sh` 會建 `models/llava-onevision-qwen2-7b-ov-hf-384`，把 `image_grid_pinpoints` 改成 `[[384, 384]]`，讓 Pilot 2 的 21 張圖放得進 32k 上下文。LLaVA-OV 偶爾在 `selection_notes` 裡寫出沒跳脫的引號；`run_pilot2.py` 遇到整段 JSON 無法解析時只抓出 `selected_positions`。
+
+### 換候選順序（Pilot 2）
+
+Pilot 2 的主要結果是 3 種候選順序的平均：建題時的順序，加上 `--order-seed 1`、`--order-seed 2`。
+
+```bash
+python pilot2/run_pilot2.py --model <served-name> --url <url> --order-seed 1
+python pilot2/run_pilot2.py --model <served-name> --url <url> --order-seed 2
+```
+
+順序由 `random.Random(f"{seed}-{qid}")` 決定。輸出的 `selected_positions` 已換回原本編號（`score_pilot2.py` 直接可用），`shown_positions` 是模型實際看到的編號。Caption 條件沿用 `<model>_captions.jsonl`。
+
+### InternVL3 解析度對照（Pilot 1）
+
+把 `serve_internvl3.sh` 建的資料夾改成 `max_dynamic_patch = 6`（另存 `models/InternVL3-8B-Instruct-6tile`），以 `internvl3-8b-bnb4-6tile` 名稱服務，`--gpu-memory-utilization 0.50 --max-model-len 22528 --limit-mm-per-prompt '{"image": 10}'`，再跑 `qwen_local_select.py`。K = 3 結果：1.57/3，和 1 塊相同。
 
 ### Gemini 3.1 Flash-Lite（Google AI Studio 免費 API）
 

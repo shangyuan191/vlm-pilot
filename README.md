@@ -29,7 +29,7 @@ pilot1/
   score_k.py                        Oracle / Top-K / Random 期望值 / 模型的符合數與 diversity
   human_labels.json                 人工標注（591 個商品）
   {qwen3-vl-8b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4,llava-ov-7b-fp8}_k{3,5}_selection.jsonl   模型輸出
-  internvl3-8b-bnb4-6tile_k3_selection.jsonl   InternVL3 每張圖最多 6 塊的解析度對照
+  internvl3-8b-bnb4-6tile_k{3,5}_selection.jsonl   InternVL3 每張圖最多 6 塊的解析度對照
 pilot2/
   build_pilot2.py                   建前 20 題（seed 20261101）
   build_pilot2_extra.py             追加 7 題人工挑選的題目圖（seed 20261102）
@@ -174,7 +174,7 @@ python pilot2/run_pilot2.py --model <served-name> --url <url> --order-seed 2
 
 ### InternVL3 解析度對照（Pilot 1）
 
-把 `serve_internvl3.sh` 建的資料夾改成 `max_dynamic_patch = 6`（另存 `models/InternVL3-8B-Instruct-6tile`），以 `internvl3-8b-bnb4-6tile` 名稱服務，`--gpu-memory-utilization 0.50 --max-model-len 22528 --limit-mm-per-prompt '{"image": 10}'`，再跑 `qwen_local_select.py`。K = 3 結果：1.57/3，和 1 塊相同。
+把 `serve_internvl3.sh` 建的資料夾改成 `max_dynamic_patch = 6`（另存 `models/InternVL3-8B-Instruct-6tile`），以 `internvl3-8b-bnb4-6tile` 名稱服務，`--gpu-memory-utilization 0.50 --max-model-len 22528 --limit-mm-per-prompt '{"image": 10}'`，再跑 `qwen_local_select.py`。結果：K = 3 是 1.57/3（和 1 塊相同），K = 5 是 2.53/5（1 塊是 2.63）。
 
 ### Gemini 3.1 Flash-Lite（Google AI Studio 免費 API）
 

@@ -3,7 +3,7 @@
 用 VLM 從商品候選中挑出一組商品，測兩個能力：
 
 - **Pilot 1：Item coverage**：Subtext-Decor-90 的 20 題 × 3 個搜尋引擎 = 60 個候選池，從每池 10 個商品挑 K 個（K = 3、5）。挑出的商品要全部符合 query，並且在 query 沒提到的維度上彼此不同。
-- **Pilot 2：Style alignment**：用 Amazon Reviews 2023 建 20 題有效題目。每題給一張家具圖和「lamps in this style」，從 20 盞燈挑 3 盞同風格的。題目圖有 Full / Caption / Blind 三種給法。
+- **Pilot 2：Style alignment**：用 Amazon Reviews 2023 建 20 題有效題目。每題給一張家具圖和「lamps in this style」，從 20 盞燈挑 3 盞同風格的。題目圖有 Full / Caption / Blind 三種給法；另有補充實驗（固定描述、A 只給風格名稱、B 先描述再選、C 標出參考圖、D 英文 prompt、拆步驟）找出 Full 偏低的原因。
 
 完整說明、prompt、結果與觀察請看實驗紀錄頁面。
 
@@ -36,10 +36,20 @@ pilot2/
   questions.json                    27 題（標注與模型輸出都對應這個檔案的編號）
   questions_v1_20q.json             前 20 題，用來驗證建題程式
   human_labels.json                 人工標注：題目圖 Y/N、每盞燈 P/F
-  run_pilot2.py                     Caption 描述 + Full / Caption / Blind 選擇（vLLM 或 Gemini）
-  score_pilot2.py                   評分
+  run_pilot2.py                     Caption 描述 + Full / Caption / Blind 選擇（vLLM 或 Gemini）；
+                                    補充實驗 --conditions stylename,fulldesc,fullmark、--lang en、--captions-from SRC
+  run_pipeline.py                   拆步驟：每張圖單獨打 5 種風格分數，再照規則選 3 盞（pipe-pred / gold / soft）
+  score_pilot2.py                   評分（單一順序）
+  summarize_pilot2.py               3 種順序平均＋補充實驗的所有表格
+  analyze_style_mentions.py         模型寫的文字有沒有說出正確風格（關鍵字比對，不呼叫模型）
+  claude-opus-5-5_captions.jsonl    固定描述：Claude Opus 5.5 只看題目圖寫的 27 段描述
   {qwen3-vl-8b-bnb4,qwen3-vl-32b-bnb4,gemini-3.1-flash-lite,internvl3-8b-bnb4,llava-ov-7b-fp8}_{captions,full,caption,blind}.jsonl   模型輸出
   <同上>_o{1,2}_{full,caption,blind}.jsonl   換候選順序（run_pilot2.py --order-seed 1、2）
+  <同上>[_o{1,2}]_{stylename,fulldesc,fullmark}.jsonl   補充實驗 A、B、C
+  <同上>_cap-{claude-opus-5-5,qwen3-vl-32b-bnb4}[_o{1,2}]_caption.jsonl   固定描述
+  qwen3-vl-8b-bnb4_en[_o{1,2}]_{captions,full,caption,blind}.jsonl   英文 prompt（D）
+  {qwen3-vl-32b-bnb4,gemini-3.1-flash-lite}_pipe_judgements.jsonl, _pipe-{pred,gold,soft}.jsonl   拆步驟
+scripts/run_vlm_job.sh              等 GPU 空出來 → 起 vLLM → 跑指定實驗 → 關掉（環境變數說明在檔案開頭）
 scripts/serve_qwen3vl.sh            起 Qwen3-VL-8B 的 vLLM server
 scripts/serve_qwen3vl_32b.sh        起 Qwen3-VL-32B 的 vLLM server（4-bit，單卡）
 scripts/serve_internvl3.sh          起 InternVL3-8B 的 vLLM server（每張圖 1 塊 448×448）
@@ -58,6 +68,8 @@ python score_k.py human_labels.json 5 qwen4bit=qwen3-vl-8b-bnb4_k5_selection.jso
 cd ../pilot2
 python score_pilot2.py --model qwen3-vl-8b-bnb4
 python score_pilot2.py --model gemini-3.1-flash-lite
+python summarize_pilot2.py          # 3 種順序平均、固定描述、A–D、拆步驟
+python analyze_style_mentions.py
 python score_pilot2.py --model internvl3-8b-bnb4
 python score_pilot2.py --model llava-ov-7b-fp8
 python score_pilot2.py --model qwen3-vl-32b-bnb4

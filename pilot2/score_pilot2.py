@@ -23,7 +23,7 @@ def main():
     oracle = {qid: min(3, sum(lab(qid, c["pos"]) == "P" for c in q["candidates"])) for qid, q in qs.items()}
 
     rows = {}
-    for cond in ("full", "caption", "blind"):
+    for cond in ("full", "caption", "blind", "stylename", "fulldesc", "fullmark", "pipe-pred", "pipe-gold", "pipe-soft"):
         f = HERE / f"{a.model}_{cond}.jsonl"
         if not f.exists(): continue
         rows[cond] = {r["qid"]: r["selected_positions"] for r in map(json.loads, f.read_text().splitlines()) if r.get("status") == "ok" and r["qid"] in qs}

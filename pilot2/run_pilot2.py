@@ -9,7 +9,7 @@ All three conditions see the 20 candidate lamps (image + title with style words 
 The model picks exactly 3 lamps. Questions whose query image the annotator marked "N" are skipped.
 
 Usage: python run_pilot2.py [--model qwen3-vl-8b-bnb4] [--url http://127.0.0.1:8021/v1/chat/completions]
-       python run_pilot2.py --backend gemini --model gemini-3.1-flash-lite
+       python run_pilot2.py --backend gemini --model gemini-3-flash-preview --conditions full
 (the gemini backend calls Google AI Studio with the key in ~/.config/gemini_api_key)
 Writes pilot2/<model>_captions.jsonl and pilot2/<model>_<condition>.jsonl (resumable).
 
@@ -27,6 +27,13 @@ IMG = HERE.parent / "data/derived/amazon_images"
 K = 3
 CAPTION_PROMPT = ("這是一件家具的商品圖片。請用 2–3 句話描述它的設計風格、造型特徵、材質和顏色，"
                   "讓沒看到圖片的人也能想像它的整體風格。不要提到品牌或商品名稱。只輸出描述本身。")
+CAPTION_PROMPT_EN = ("This is a product photo of a piece of furniture. In 2-3 sentences, describe its design style, form, materials "
+                     "and colours so that someone who has not seen the photo can picture its overall style. Do not mention brands "
+                     "or product names. Output only the description.")
+# condition "stylename": the style is named in words instead of shown (text-route upper bound)
+STYLE_NAME = {"mid-century": "mid-century modern", "farmhouse": "farmhouse", "industrial": "industrial",
+              "coastal": "coastal", "scandinavian": "Scandinavian"}
+EXTRA_CONDS = ("stylename", "fulldesc", "fullmark")   # added 2026-11-03; the original three prompts are unchanged
 
 
 def img_url(asin):
@@ -70,8 +77,16 @@ def parse_json(t):
         return json.loads(m.group(0))
 
 
-def select(url, model, q, cond, caption):
-    if cond == "full":
+def select(url, model, q, cond, caption, lang="zh"):
+    if lang == "en": return select_en(url, model, q, cond, caption)
+    ref_desc = None
+    if cond == "stylename":
+        head = [{"type": "text", "text": f"使用者說：「lamps in {STYLE_NAME[q['style']]} style」。"}]
+    elif cond == "fullmark":
+        head = [{"type": "text", "text": "使用者附上一張參考家具圖片，並說：「lamps in this style」。\n【參考圖片（REFERENCE）：這是使用者附上的家具，不是候選燈具】"},
+                {"type": "image_url", "image_url": {"url": img_url(q["query_item"]["asin"])}},
+                {"type": "text", "text": "【參考圖片結束】"}]
+    elif cond in ("full", "fulldesc"):
         head = [{"type": "text", "text": "使用者附上一張參考家具圖片，並說：「lamps in this style」。參考圖片如下："},
                 {"type": "image_url", "image_url": {"url": img_url(q["query_item"]["asin"])}}]
     elif cond == "caption":
@@ -82,10 +97,42 @@ def select(url, model, q, cond, caption):
     for c in q["candidates"]:
         content.append({"type": "text", "text": f"POSITION {c['pos']}; title={c['title_clean']}"})
         content.append({"type": "image_url", "image_url": {"url": img_url(c["asin"])}})
-    content.append({"type": "text", "text": "請只回傳 JSON，不要 Markdown。格式如下（尖括號是要你填入的內容，不是答案）："
-                    '{"selected_positions":[<position>, ...],"selection_notes":"<一句話說明為什麼這樣選>"}。'
-                    f"selected_positions 使用 1-based position，剛好 {K} 個且不得重複；請根據圖片和標題實際判斷後再選。"})
-    text, usage = post(url, model, content, 400)
+    if cond == "fulldesc":
+        content.append({"type": "text", "text": "請先在 reference_description 用 2–3 句話描述參考圖片的設計風格、造型特徵、材質和顏色，再依照這個描述選燈。"
+                        "請只回傳 JSON，不要 Markdown。格式如下（尖括號是要你填入的內容，不是答案）："
+                        '{"reference_description":"<2–3 句參考圖片描述>","selected_positions":[<position>, ...],"selection_notes":"<一句話說明為什麼這樣選>"}。'
+                        f"selected_positions 使用 1-based position，剛好 {K} 個且不得重複；請根據圖片和標題實際判斷後再選。"})
+    else:
+        content.append({"type": "text", "text": "請只回傳 JSON，不要 Markdown。格式如下（尖括號是要你填入的內容，不是答案）："
+                        '{"selected_positions":[<position>, ...],"selection_notes":"<一句話說明為什麼這樣選>"}。'
+                        f"selected_positions 使用 1-based position，剛好 {K} 個且不得重複；請根據圖片和標題實際判斷後再選。"})
+        if cond == "fullmark":
+            content[-1]["text"] += f"注意：最前面那張參考家具圖片不是候選；只能從 POSITION 1–{len(q['candidates'])} 的燈具中選。"
+    return finish(url, model, q, content, 900 if cond == "fulldesc" else 400)
+
+
+def select_en(url, model, q, cond, caption):
+    """English version of the original three conditions (prompt-language check)."""
+    if cond == "full":
+        head = [{"type": "text", "text": 'The user attached a reference photo of a piece of furniture and said: "lamps in this style". The reference photo:'},
+                {"type": "image_url", "image_url": {"url": img_url(q["query_item"]["asin"])}}]
+    elif cond == "caption":
+        head = [{"type": "text", "text": f'The user attached a reference photo of a piece of furniture and said: "lamps in this style". A text description of the reference photo:\n{caption}'}]
+    elif cond == "blind":
+        head = [{"type": "text", "text": 'The user said: "lamps in this style". (The reference photo the user mentions is not available.)'}]
+    else: raise ValueError(f"no English prompt for {cond}")
+    content = head + [{"type": "text", "text": f"Below are {len(q['candidates'])} candidate lamps. Select exactly {K} lamps that best match the style the user wants."}]
+    for c in q["candidates"]:
+        content.append({"type": "text", "text": f"POSITION {c['pos']}; title={c['title_clean']}"})
+        content.append({"type": "image_url", "image_url": {"url": img_url(c["asin"])}})
+    content.append({"type": "text", "text": "Return JSON only, no Markdown, in this format (angle brackets are placeholders, not answers): "
+                    '{"selected_positions":[<position>, ...],"selection_notes":"<one sentence on why>"}. '
+                    f"selected_positions are 1-based, exactly {K}, no duplicates; decide from the images and titles."})
+    return finish(url, model, q, content, 400)
+
+
+def finish(url, model, q, content, max_tokens):
+    text, usage = post(url, model, content, max_tokens)
     try: parsed = parse_json(text)
     except json.JSONDecodeError:
         # malformed JSON elsewhere (e.g. an unescaped quote in selection_notes): keep only the selection
@@ -95,7 +142,7 @@ def select(url, model, q, cond, caption):
     sel = parsed.get("selected_positions", [])
     if not isinstance(sel, list) or len(sel) != K or len(set(sel)) != K or any(not isinstance(x, int) or not 1 <= x <= len(q["candidates"]) for x in sel):
         raise ValueError(f"invalid selection {sel}")
-    return sel, parsed.get("selection_notes", ""), usage
+    return sel, parsed.get("selection_notes", ""), usage, parsed.get("reference_description")
 
 
 def done_ids(path):
@@ -107,17 +154,22 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--model", default="qwen3-vl-8b-bnb4"); ap.add_argument("--url", default="http://127.0.0.1:8021/v1/chat/completions")
     ap.add_argument("--backend", choices=["openai", "gemini"], default="openai"); ap.add_argument("--conditions", default="full,caption,blind")
     ap.add_argument("--order-seed", type=int, default=None)
+    ap.add_argument("--lang", choices=["zh", "en"], default="zh", help="en: English prompts for full/caption/blind; outputs <model>_en...")
+    ap.add_argument("--captions-from", default=None, help="use pilot2/<NAME>_captions.jsonl (another source's captions) "
+                    "instead of this model's own; runs only the caption condition, output <model>_cap-<NAME>[_o<S>]_caption.jsonl")
     a = ap.parse_args(); BACKEND = a.backend; conds = a.conditions.split(",")
+    if a.captions_from: conds = ["caption"]
     labels = json.load(open(HERE / "human_labels.json"))
     qs = [q for q in json.load(open(HERE / "questions.json")) if labels[q["qid"]]["query"] != "N"]
     print(len(qs), "usable questions", flush=True)
 
-    cap_path = HERE / f"{a.model}_captions.jsonl"
-    have = done_ids(cap_path) if "caption" in conds else {q["qid"] for q in qs}
+    cap_path = HERE / (f"{a.captions_from}_captions.jsonl" if a.captions_from else f"{a.model}{'_en' if a.lang == 'en' else ''}_captions.jsonl")
+    if a.captions_from and not cap_path.exists(): raise SystemExit(f"missing {cap_path}")
+    have = done_ids(cap_path) if "caption" in conds and not a.captions_from else {q["qid"] for q in qs}
     with open(cap_path, "a") as fh:
         for q in qs:
             if q["qid"] in have: continue
-            content = [{"type": "image_url", "image_url": {"url": img_url(q["query_item"]["asin"])}}, {"type": "text", "text": CAPTION_PROMPT}]
+            content = [{"type": "image_url", "image_url": {"url": img_url(q["query_item"]["asin"])}}, {"type": "text", "text": CAPTION_PROMPT_EN if a.lang == "en" else CAPTION_PROMPT}]
             for attempt in range(1, 5):
                 try:
                     text, usage = post(a.url, a.model, content, 200); break
@@ -133,8 +185,8 @@ def main():
             print("caption", q["qid"], text.strip()[:100], flush=True)
     captions = {r["qid"]: r["caption"] for r in map(json.loads, cap_path.read_text().splitlines()) if r.get("status") == "ok"} if cap_path.exists() else {}
 
-    tag = a.model if a.order_seed is None else f"{a.model}_o{a.order_seed}"
-    for cond in [c for c in ("full", "caption", "blind") if c in conds]:
+    tag = a.model + ("_en" if a.lang == "en" else "") + (f"_cap-{a.captions_from}" if a.captions_from else "") + ("" if a.order_seed is None else f"_o{a.order_seed}")
+    for cond in [c for c in ("full", "caption", "blind") + EXTRA_CONDS if c in conds]:
         out = HERE / f"{tag}_{cond}.jsonl"; have = done_ids(out)
         with open(out, "a") as fh:
             for q in qs:
@@ -147,8 +199,9 @@ def main():
                     shown = dict(q, candidates=[dict(c, pos=i) for i, c in enumerate(cands, 1)])
                 for attempt in range(1, 4):
                     try:
-                        sel, notes, usage = select(a.url, a.model, shown, cond, captions.get(q["qid"]))
+                        sel, notes, usage, ref_desc = select(a.url, a.model, shown, cond, captions.get(q["qid"]), a.lang)
                         extra = {} if orig is None else {"order_seed": a.order_seed, "shown_positions": sel}
+                        if ref_desc is not None: extra["reference_description"] = ref_desc
                         if orig is not None: sel = [orig[x - 1] for x in sel]
                         fh.write(json.dumps({"qid": q["qid"], "condition": cond, "model": a.model, "k": K, "selected_positions": sel, **extra, "selection_notes": notes,
                                              "status": "ok", "attempt": attempt, "usage": usage, "finished_at": datetime.now(timezone.utc).isoformat()}, ensure_ascii=False) + "\n")
